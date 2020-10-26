@@ -12,30 +12,61 @@ body {
 /**
 logo - start
  */
-.header{
-	margin-top: 2.5%;
-}
+/*.header{*/
+	/*background-color: black;*/
+/*}*/
 .logo-div{
 	-webkit-box-shadow: -4px 4px 10px 1px rgba(51,51,3,0.5);
 	-moz-box-shadow: -4px 4px 10px 1px rgba(51,51,3,0.5);
 	box-shadow: -4px 4px 10px 1px rgba(51,51,3,0.5);
-	padding: 8%;
-	background: #AF0B00;
+	border-radius: 10px;
+	padding: 10% 50% 5% 50%;
 	text-align: center;
+	background-color: #b3daff;
+	width: 140%;
+	margin-top: -7%;
 }
 
 .logo-img{
-	width: 50%;
+	margin-top: 20%;
+	width: 100%;
 }
 
+.logo-div a{
+	color: black;
+	/*font-size: 92%;*/
+	/*text-decoration: none;*/
+}
+
+/*.logo-div a:hover {*/
+/*	text-decoration: none;*/
+/*}*/
+
+
+/*.logo-div a:active {*/
+/*	text-decoration: none;*/
+/*}*/
+
+/*
+roasters and tools pages
+ */
+.grid-item {
+	text-align: center;
+}
+@media screen and (max-width: 600px) {
+	.grid-container {
+		display: grid;
+		grid-template-columns: auto ;
+	}
+}
 /**
 navigation bar - start
  */
 .topnav {
-	margin-top: 1%;
 	margin-right: -5%;
 	text-align: center;
 	overflow: hidden;
+	margin-top: 4%;
 
 }
 
@@ -163,6 +194,12 @@ login style - start
 .login-form {
 	padding: 2%;
 }
+
+/**
+Tools list page
+ */
+
+
 /**
 RESPONSIVENESS - START
  */

@@ -1,6 +1,7 @@
 package com.mtajr.entity;
 
 import lombok.*;
+import org.springframework.context.annotation.Lazy;
 
 import javax.persistence.*;
 
@@ -32,5 +33,6 @@ public class Store {
     @Lob
     @Basic(fetch = FetchType.LAZY)
     @Column()
+    @Lazy
     private byte[] image;
 }

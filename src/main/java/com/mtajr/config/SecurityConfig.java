@@ -18,27 +18,27 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
         User.UserBuilder userBuilder = User.withDefaultPasswordEncoder();
 
         auth.inMemoryAuthentication()
-                .withUser(userBuilder.username("Nawaf").password("123").roles("ADMIN"));
+                .withUser(userBuilder.username("Nawaf").password("1").roles("ADMIN"));
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
         http.
-                authorizeRequests().
-                antMatchers("/resources/**", "/*").
-                permitAll().
-                anyRequest().
-                authenticated().
-                and().
-                formLogin().
-                loginPage("/admin/login").
-                loginProcessingUrl("/admin/authenticateTheUser").
-                defaultSuccessUrl("/admin/list", true).
-                permitAll()
-        .and()
-                .logout().logoutUrl("/admin/logout").permitAll();
-//                .and().csrf().disable();
+            authorizeRequests().
+            antMatchers("/resources/**", "/*", "/css/**", "/js/**", "/images/**").
+            permitAll().
+            anyRequest().
+            authenticated().
+        and().
+            formLogin().
+            loginPage("/admin/login").
+            loginProcessingUrl("/admin/authenticateTheUser").
+            defaultSuccessUrl("/admin/list", true).
+            permitAll().
+        and().
+            logout().logoutUrl("/admin/logout").permitAll().
+        and().
+            csrf().disable();
 
-//        http.authorizeRequests().antMatchers("/css/**", "/js/**", "/images/**").permitAll();
     }
 }

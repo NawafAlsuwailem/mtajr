@@ -31,37 +31,42 @@
 </style>
 
 <body>
-<div class="row header">
+
+<div class="container header">
+    <div class="col-lg-1 col-xs-3" style="float: right">
+        <a href="${pageContext.request.contextPath}/store/category">
+            <div class="logo-div">
+                <img class="logo-img" src="${pageContext.request.contextPath}/resources/images/logo-black.png" alt="Logo">
+                <p>е «ћ—</p>
+            </div>
+        </a>
+    </div>
 
     <div class="col-lg-11 col-xs-9">
 
         <div class="topnav" id="myTopnav">
             <a href="${pageContext.request.contextPath}/" >«д’бЌ… «д—∆к”к…</a>
-            <a href="#news" >еЌ«е’ «двзи… и«ѕи« з«</a>
-            <a href="#contact" >е «ћ—  ћекў «двзи… и«ѕи« з«</a>
+            <a href="${pageContext.request.contextPath}/store/roasters" >еЌ«е’ «двзи… и«ѕи« з«</a>
+            <a href="${pageContext.request.contextPath}/store/tools" >е «ћ—  ћекў «двзи… и«ѕи« з«</a>
+
 
             <c:if test="${not empty pageContext.request.userPrincipal}">
-                <if:out value="${param.logout}" >
-                    <a href="${pageContext.request.contextPath}/admin/list" class="active">в«∆е… «де «ћ—</a>
+                <if:out value="${param.logout}">
+                    <a id="admin-option" href="${pageContext.request.contextPath}/admin/list" class="active">в«∆е… «де «ћ—</a>
                     <a id="admin-option" href="${pageContext.request.contextPath}/admin/logout"> ”ћкд ќ—ић</a>
                 </if:out>
             </c:if>
             <c:if test="${ empty pageContext.request.userPrincipal}">
                 <a id="admin-option" href="${pageContext.request.contextPath}/admin/login" >е‘—б</a>
             </c:if>
-
-
             <a href="javascript:void(0);" class="icon" onclick="myFunction()">
                 <i class="fa fa-bars" style="float: left"></i>
             </a>
         </div>
     </div>
-    <div class="col-lg-1 col-xs-3" style="float: right">
-        <div class="logo-div">
-            <img class="logo-img" src="${pageContext.request.contextPath}/resources/images/logo-black.png" alt="Logo">
-            <h4 style="color: black">е «ћ—</h4>
-        </div>
-    </div>
+
 </div>
+
+<hr/>
 
 <div class="container">

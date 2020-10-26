@@ -36,7 +36,6 @@ public class AdminController {
         byte[] image = storeService.loadImage(id);
         httpServletResponse.setContentType("image/jpeg");
 
-        System.out.println(image);
         ServletOutputStream servletOutputStream = httpServletResponse.getOutputStream();
         servletOutputStream.write(image);
         servletOutputStream.close();

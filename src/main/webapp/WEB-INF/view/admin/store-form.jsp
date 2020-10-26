@@ -1,5 +1,4 @@
 <jsp:include page="../template/header.jsp" />
-<jsp:include page="../template/admin-header.jsp" />
 <%@ page contentType="text/html; charset=UTF-8" pageEncoding="ISO-8859-6" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 
@@ -12,19 +11,15 @@
                 <tr>
                     <td><label>«‰ÊËŸ</label></td>
                     <td>
-                        <form:select path="type">
-                            <form:option value="tools">Â Ã—  ÃÂÍŸ «‰‚ÁË… Ë«œË« Á«</form:option>
-                            <form:option value="roaster">ÂÕ«Â’ «‰‚ÁË… Ë«œË« Á«</form:option>
+                        <form:select required="required" path="type">
+                            <form:option value="tools">Â Ã—  ÃÂÍŸ «‰‚ÁË… Ë√œË« Á«</form:option>
+                            <form:option value="roaster">ÂÕ«Â’ «‰‚ÁË… Ë√œË« Á«</form:option>
                         </form:select>
-                            <%--                        <input type="radio" id="male" name="gender" value="male">--%>
-                            <%--                        <label for="male">Male</label>--%>
-                            <%--                        <input type="radio" id="female" name="gender" value="female">--%>
-                            <%--                        <label for="female">Female</label><br>--%>
                     </td>
                 </tr>
                 <tr>
                     <td><label>«‰√”Â</label></td>
-                    <td><form:input path="name"/></td>
+                    <td><form:input required="required" path="name"/></td>
                 </tr>
                 <tr>
                     <td><label>«‰√”Â »«‰«ÊÕ‰Í“Í</label></td>
@@ -32,12 +27,12 @@
                 </tr>
                 <tr>
                     <td><label>«‰—«»◊</label></td>
-                    <td><form:input path="url"/></td>
+                    <td><form:input required="required" path="url"/></td>
                 </tr>
 
                 <tr>
                     <td><label>«‰Ÿ‰«Â… «‰ Ã«—Í…</label></td>
-                    <td><input type="file" name="file" id="file"/></td>
+                    <td><input type="file" name="file" id="file" required/></td>
                 </tr>
                 <tr>
                     <td><input type="submit" value="Õ·ÿ" class="save" /></td>

@@ -9,11 +9,11 @@
     <div class="login-form">
         <form:form action="${pageContext.request.contextPath}/admin/authenticateTheUser" method="post">
             <c:if test="${param.error != null}">
-                <i>√”е «де” ќѕе «и где… «де—и— ќ«„∆…</i>
+                <i style="color: red">√”е «де” ќѕе «и где… «де—и— ќ«„∆…</i>
             </c:if>
-            <input type="text" name="username" placeholder=" √”е «де” ќѕе">
+            <input type="text" name="username" placeholder=" √”е «де” ќѕе" required>
             <br>
-            <input type="password" name="password" placeholder="где… «де—и—">
+            <input type="password" name="password" placeholder="где… «де—и—" required>
             <input type="submit" value=" вѕе" style="align-content: center; align-self: center;">
         </form:form>
     </div>
